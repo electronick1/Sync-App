@@ -1,0 +1,33 @@
+{% extends "edit_integration_base.html" %}
+
+{%  block extra_css %}
+<style>
+    #info p{
+        text-align: center;
+    }
+    .google_oauth {
+        font-size: 24px;
+    }
+</style>
+{% endblock %}
+
+
+{% block content %}
+<div class="service-card">
+        <div class="service-picture">
+            <img src="{{ service.logo_url }}"
+                 alt="{{ service.verbose_name }}">
+            <br>
+        </div>
+<div class="service-description">
+<p>
+    Github integration synchronizes your repositories issue from todoist.
+</p>
+
+<a href="{{ authorize_url }}" class="google_oauth">Authentication in github</a>
+<p> For adding github integration, please authenticate in github</p>
+    </div>
+</div>
+
+
+{% endblock content %}
